@@ -1,5 +1,8 @@
 #!/bin/bash
 set -x
+apt update -y 
+apt install -y python3.12-venv python3.12-dev build-essential git curl libmariadb-dev-compat 
+
 # XLTD Auctioneer Vars
 AUCTIONEER_PATH="/opt/ffxi/auctioneer"
 # Server Vars

@@ -13,10 +13,6 @@ RUN chmod +x /opt/entrypoint.sh
 FROM ubuntu:latest
 COPY --from=build /opt /opt
 
-RUN apt update -y \
-&& apt install -y python3.12-venv python3.12-dev build-essential git curl libmariadb-dev-compat \
-&& apt-get clean
-
 ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 # docker run -it -v ./lsb/ffxi:/opt/ffxi ffxi-vanilla-lsb-init:latest
 CMD [ "/opt/entrypoint.sh" ]
